@@ -4,6 +4,8 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import commerce from "../../Assets/e-commerce.jpeg"
 import photoflix from "../../Assets/photoflix.jpeg"
+import Slackmockapi from "../../Assets/Slackmockapi.png"
+import TaskManager from "../../Assets/TaskManager.png"
 
 
 
@@ -19,7 +21,31 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+
+          <Col md={4} className="project-card">          
+            <ProjectCard
+              imgPath={TaskManager}
+              isBlog={false}
+              title="Task Manager"
+              description="A full-stack Task Manager application built with Next.js, NestJS, and MongoDB. Users can register, log in, create, edit, and track their tasks with priorities and due dates. The backend is deployed on Render and the database is hosted on MongoDB Atlas."
+              ghLink="https://github.com/laxman006/task-manager"
+              demoLink=""
+            />
+          </Col>
+
+          <Col md={4} className="project-card">          
+            <ProjectCard
+              imgPath={Slackmockapi}
+              isBlog={false}
+              title="Slack Mock API"
+              description="A full-stack web application that simulates key components of a Slack-like admin dashboard using React, Node.js, and REST APIs. This project demonstrates how to build a modern interface that fetches and displays mock data — including users, license info, and system usage statistics — from a backend API powered by static JSON files."
+              ghLink="https://github.com/laxman006/Slack-Mock-Api"
+              demoLink=""
+            />
+          </Col>
+
+
+          <Col md={4} className="project-card">          
             <ProjectCard
               imgPath={commerce}
               isBlog={false}
@@ -40,12 +66,6 @@ function Projects() {
               demoLink=""
             />
           </Col>
-
-         
-
-          
-
-          
 
          
         </Row>
